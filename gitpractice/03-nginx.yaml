@@ -5,3 +5,7 @@
     ansible.builtin.package: #heterougenous module that can work for all distors
       name: nginx
       state: present
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
