@@ -1,0 +1,11 @@
+#YAML works on indentation, means space
+Name: karunakar
+Email: mkr0203@gmail.com
+Address:
+- type: per
+  addressline1: beml layout
+  addressline2: marathalli
+- type: current
+  addressline1: 30A
+  addressline2: Bromölla
+  
