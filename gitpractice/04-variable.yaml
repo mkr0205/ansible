@@ -1,6 +1,6 @@
 - name: variable to print
   hosts: web
-  vars:
+  vars: #play level , all tasks in this play have access to this
     NAME: "Karunakar Reddy"
     DESIGNATION: DevOps engineer
     COMPANY: "CGI"
@@ -8,3 +8,13 @@
   - name: print the information"
     ansible.builtin.debug:
       msg: "Hi, I am {{NAME}} {{DESIGNATION}} from {{COMPANY}}"
+
+  - name: print the information again
+    vars:
+      DESIGNATION: "Unix &DevOps Administrator"
+    ansible.builtin.debug:
+      msg: "Hi, I am working as {{DESIGNATION}}"
+
+  - name: print the information"
+    ansible.builtin.debug:
+      msg: "Hi, I am working in sweden {{NAME}} {{DESIGNATION}} from {{COMPANY}}"
