@@ -10,5 +10,5 @@
   tasks:
   - name: print employee details
     ansible.builtin.debug:
-      msg: "Hi, I am working as {{DESIGNATION}}, in {{COMPANY}}, and my name is {{Employee}}"
+      msg: "I am working as {{DESIGNATION}}, in {{COMPANY}}, and my name is {{Employee}}"
     
