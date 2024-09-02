@@ -1,0 +1,7 @@
+- name: nginx install and start
+  hosts: web
+  tasks:
+  - name: nginx install
+    ansible.builtin.package: #heterougenous module that can work for all distors
+      name: nginx
+      state: present
