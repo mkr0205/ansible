@@ -11,10 +11,10 @@
 
   - name: print the information again
     vars:
-      DESIGNATION: "Unix &DevOps Administrator"
+      DESIGNATION: "Unix & DevOps Administrator"
     ansible.builtin.debug:
       msg: "Hi, I am working as {{DESIGNATION}}"
 
   - name: print the information"
     ansible.builtin.debug:
-      msg: "Hi, I am working in sweden {{NAME}} {{DESIGNATION}} from {{COMPANY}}"
+      msg: "Hi, I am working in sweden as {{DESIGNATION}} from {{COMPANY}}"
