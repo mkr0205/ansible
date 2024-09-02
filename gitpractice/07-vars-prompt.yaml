@@ -1,0 +1,14 @@
+- name: variables from prompt
+  hosts: web
+  vars_prompt:
+  - name: DESIGNATION
+    prompt: Please enter the designation name
+  - name: COMPANY
+    prompt: Please enter the company name
+  - name: "Employee
+    prompt: Please enter the employee name
+  tasks:
+  - name: print employee details
+    ansible.builtin.debug:
+      msg: "Hi, I am working as {{DESIGNATION}} in {{COMPANY}} and my name is {{NAME}} "
+    
