@@ -7,4 +7,4 @@
   tasks:
   - name: print the information"
     ansible.builtin.debug:
-      msg: "Hi, I am {{NAME}} {{DESIGNATION}} from {{COMPANY:}}"
+      msg: "Hi, I am {{NAME}} {{DESIGNATION}} from {{COMPANY}}"
