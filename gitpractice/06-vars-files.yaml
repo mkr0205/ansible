@@ -1,0 +1,6 @@
+- name: variables from files
+  hosts: web
+  tasks:
+  - name: print the employee details
+    ansible.builtin.debug:
+      msg: "Employee is {{NAME}} and working as {{DESIGNATION}} in {{COMPANY}} "
