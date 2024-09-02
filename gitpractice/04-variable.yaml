@@ -1,0 +1,6 @@
+- name: variable to print
+  hosts: web
+  tasks:
+  - name: print the information
+    ansible.builtin.debig:
+      msg: "Hi, I am karunakar Reddy DevOps engineer from CGI"
