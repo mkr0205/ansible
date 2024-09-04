@@ -1,5 +1,6 @@
 - name: user creation
   hosts: dev
+  become: yes
   tasks:
   - name: check user is exists
     ansible.builtin.command: id testuser
