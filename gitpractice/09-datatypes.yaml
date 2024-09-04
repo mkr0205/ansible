@@ -12,7 +12,7 @@
     tools: # map /dictionary
       cm: ansible
       os: redhat
-  taks:
+  tasks:
   - name: print the course information
     ansible.builtin.debug:
-      msg: "Hi, This is ocpadmin {{ course }} {{ duration }} topics are {{ topics }} and live: {{ live }} tools are: {{ tools }}"
+      msg: "Hi, This is ocpadmin {{ course }} duration is {{ duration }} hrs and topics are {{ topics }} and live: {{ live }} tools are: {{ tools }}"
