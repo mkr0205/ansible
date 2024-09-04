@@ -10,5 +10,5 @@
       msg: "user info: {{ USER }}"
   - name: create user
     ansible.builtin.command: id testuser
-    when: USER.rc :wq'= 0  
+    when: USER.rc != 0  
   
