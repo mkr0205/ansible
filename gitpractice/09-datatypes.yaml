@@ -1,0 +1,18 @@
+- name: datatypes list
+  hosts: all
+  vars:
+    course: "Ansible" #string
+    duration: 30 #number
+    topics: # list
+    - Linux
+    - ansible
+    - openshift
+    - hacking
+    live: ture #boolean
+    tools: # map /dictionary
+      cm: ansible
+      os: redhat
+  taks:
+  - name: print the course information
+    ansible.builtin.debug:
+      msg: "Hi, This is ocpadmin {{ course }} {{ duration }} topics are {{ topics }} and live: {{ live }} tools are: {{ tools }}"
