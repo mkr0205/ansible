@@ -4,7 +4,7 @@
   - name: check user is exists
     ansible.builtin.command: id testuser
     register: USER # Here USER is variable that outout from above ansible.builtin.command
-
+    ignore_errors: True
   - name: print user information 
     ansible.builtin.debug:
       msg: "user info: {{ USER }}"
