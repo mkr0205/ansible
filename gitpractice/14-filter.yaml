@@ -1,5 +1,7 @@
 - name: Filter testing
   hosts: dev
+  var_files:
+  - vars.yaml 
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
