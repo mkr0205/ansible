@@ -1,0 +1,12 @@
+- name: Package management with loops
+  hosts: dev
+  become: yes
+  tasks:
+  - name: Install and uninstall using ansible loops
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: 'nginx' , state: 'obsent' }
+    - { name: 'mysql' , state: 'obsent' }
+    - { name: 'postfix' , state: 'obsent' }
