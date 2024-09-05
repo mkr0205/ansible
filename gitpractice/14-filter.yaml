@@ -1,6 +1,6 @@
 - name: Filter testing
   hosts: dev
-  var_files:
+  vars:
   - vars.yaml 
   tasks:
   - name: print the default variable
