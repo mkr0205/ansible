@@ -1,0 +1,11 @@
+- name: Install multiple packages using loops
+  hosts: dev
+  tasks:
+  - name: Install nginx and mysql postfix
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - postfix
