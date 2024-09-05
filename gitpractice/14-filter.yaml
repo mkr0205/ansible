@@ -1,0 +1,6 @@
+- name: Filter testing
+  hosts: dev
+  tasks:
+  - name: print the default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ NAME }} my designation {{ DESIGNATION }}, now I am workig {{ "CGI" }} 
