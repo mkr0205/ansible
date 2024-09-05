@@ -1,5 +1,6 @@
 - name: Install multiple packages using loops
   hosts: dev
+  become: yes
   tasks:
   - name: Install nginx and mysql postfix
     ansible.builtin.package:
