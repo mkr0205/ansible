@@ -1,0 +1,13 @@
+- name: loops demo
+  hosts: local 
+  tasks:
+  - name: print name
+    ansible.builtin.debug:
+      msg: " My God {{ item }}"
+    loop:
+    - Ganesh
+    - Durga
+    - Vishnu
+    - Shiva
+    - Om
+  
