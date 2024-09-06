@@ -36,3 +36,12 @@
         trainee: "Arjuna"
     ansible.builtin.debug:
       msg: "{{ God | dict2items }}"
+
+  - name : conver map to dictionary
+    vars:
+      God:
+        Name: "Krishna"
+        time: "Dvaparayuga"
+        trainee: "Arjuna"
+    ansible.builtin.debug:
+      msg: "{{ God | list2map }}"
