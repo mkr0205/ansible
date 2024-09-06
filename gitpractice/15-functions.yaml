@@ -40,8 +40,6 @@
   - name : conver map to dictionary
     vars:
       God:
-        Name: "Krishna"
-        time: "Dvaparayuga"
-        trainee: "Arjuna"
+      - {"key": "name", "value": "Krishna"}
     ansible.builtin.debug:
       msg: "{{ God | list2map }}"
