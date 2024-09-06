@@ -27,3 +27,12 @@
       numbers: [1,2,3,3,4,2,3,5,6,1]
     ansible.builtin.debug:
       msg: "min: {{ numbers | min }},Max: {{ numbers | max }} "
+  
+  - name : conver map to dictionary
+    vars:
+      God:
+        Name: Krishna
+        time: Dvaparayuga
+        trainer: Arjuna
+    ansible.builltin.debug:
+      msg: "{{ God | dict2items }}"
