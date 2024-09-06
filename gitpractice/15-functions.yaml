@@ -45,6 +45,6 @@
       msg: "{{ God | items2dict }}"
   - name: check valied IP address or not
     vars:
-      myip: 192.168.1.1
+      myip: "192.168.1.1"
     ansible.builtin.debug:
-      msg: {{ myip | ansible.utils.ipv4 }}
+      msg: "{{ myip | ansible.utils.ipv4 }}"
