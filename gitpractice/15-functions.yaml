@@ -42,4 +42,4 @@
       God:
       - { "key": "name", "value": "Krishna" }
     ansible.builtin.debug:
-      msg: "{{ God | list2map }}"
+      msg: "{{ God | list2dict}}"
