@@ -4,4 +4,4 @@
   tasks:
   - name: excute the command
     ansible.builtin.shell: ls -ltr >/tmp/output.txt
-    ansuble.butiltin.command: cat /tmp/output.txt
+    ansuble.builtin.command: cat /tmp/output.txt
