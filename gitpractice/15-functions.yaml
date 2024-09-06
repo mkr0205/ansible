@@ -33,6 +33,6 @@
       God:
         Name: "Krishna"
         time: "Dvaparayuga"
-        trainer: "Arjuna"
+        trainee: "Arjuna"
     ansible.builtin.debug:
       msg: "{{ God | dict2items }}"
