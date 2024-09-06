@@ -6,5 +6,5 @@
     ansible.builtin.shell: ls -ltr >/tmp/output.txt
 
   - name: excute command   
-    ansuble.builtin.command: cat /tmp/output.txt
+    ansible.builtin.command: cat /tmp/output.txt
     register: output
