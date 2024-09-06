@@ -2,6 +2,9 @@
   hosts: dev
   become: yes
   tasks:
-  - name: excute the command
+  - name: excute the shell
     ansible.builtin.shell: ls -ltr >/tmp/output.txt
+
+  - name: excute command   
     ansuble.builtin.command: cat /tmp/output.txt
+    register: output
