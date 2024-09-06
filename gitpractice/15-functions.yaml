@@ -31,8 +31,8 @@
   - name : conver map to dictionary
     vars:
       God:
-        Name: Krishna
-        time: Dvaparayuga
-        trainer: Arjuna
+        Name: "Krishna"
+        time: "Dvaparayuga"
+        trainer: "Arjuna"
     ansible.builltin.debug:
       msg: "{{ God | dict2items }}"
