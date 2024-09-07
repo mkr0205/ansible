@@ -1,0 +1,56 @@
+- name: Create aws ec2 instance
+  hosts: localhost
+  vars:
+    subnet_id:
+    instance_type:
+    sg_id:
+    ami_id:
+    instance:
+    - mysql
+    - backend
+    - frontend
+  zone: 
+  tasks:
+  - name: Install python modules boto3 and botocore
+    ansible.builtin.pip:
+      name: 
+      - boto3
+      - botocore
+      executable: pip3.9
+  - name: Create ec2 instance
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      vpc_subnet_id: "{{ subnnet_id }}"
+      instance_type: "{{ instance_type }}"
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+    loop: "{{ instance }}"
+    register: ec2_instance
+  
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ ec2_instance }}"
+
+  - name: Create R53 records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
+      type: A
+      ttl: 7200
+      value: "{{ ec2_instance.result[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_instance.results }}"
+    - name: Create R53 records
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ zone }}"
+      type: A
+      ttl: 7200
+      value: "{{ ec2_instance.result[0].public_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: "{{ ec2_instance.results }}"
+    when: item.item == "frontend" 
