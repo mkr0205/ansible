@@ -34,5 +34,5 @@
         name: "DevOps with AWS"
         duration: 120
         trainee: Karunakar
-   ansible.builtin.debug:
-     msg: "{{ course | duct2items }}"
+    ansible.builtin.debug:
+      msg: "{{ course | duct2items }}"
