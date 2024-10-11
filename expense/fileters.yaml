@@ -23,3 +23,8 @@
       numbers: [1,2,4,5,6,2,34,5]
     ansible.builtin.debug:
       msg: "{{ numbers | unique }}"
+  - name: get the unique values
+    vars:
+      numbers: [1,2,4,5,6,2,34,5]
+    ansible.builtin.debug:
+      msg: "Min: {{ numbers | min }}, Max: {{ numbers | max }}"
