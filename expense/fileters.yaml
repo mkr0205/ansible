@@ -28,3 +28,11 @@
       numbers: [1,2,4,5,6,2,34,5]
     ansible.builtin.debug:
       msg: "Min: {{ numbers | min }}, Max: {{ numbers | max }}"
+  - name: Covert map to list
+    vars: 
+      course:
+        name: "DevOps with AWS"
+        duration: 120
+        trainee: Karunakar
+   ansible.builtin.debug:
+     msg: "{{ course | duct2items }}"
