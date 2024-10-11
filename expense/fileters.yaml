@@ -35,4 +35,4 @@
         duration: 120
         trainee: Karunakar
     ansible.builtin.debug:
-      msg: "{{ course | duct2items }}"
+      msg: "{{ course | dict2items }}"
